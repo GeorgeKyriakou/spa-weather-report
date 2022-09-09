@@ -1,4 +1,5 @@
 export interface Weather {
+	message?: string;
 	base: string;
 	clouds: { all: number };
 	cod: number;

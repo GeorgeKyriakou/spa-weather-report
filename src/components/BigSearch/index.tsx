@@ -10,7 +10,7 @@ interface Props {
 const SearchBar = ({ setWeather }: Props) => {
 	const [inputValue, setInputValue] = useState("");
 	const [weather, setLocation] = useFetchWeather();
-	const [debouncedSearchTerm, _] = useDebounce(inputValue, 1000);
+	const [debouncedSearchTerm, _] = useDebounce(inputValue, 800);
 
 	useEffect(() => {
 		setWeather(weather);
@@ -27,7 +27,7 @@ const SearchBar = ({ setWeather }: Props) => {
 			<input
 				className="search"
 				value={inputValue}
-				placeholder="Search..."
+				placeholder="Search for a city in the world..."
 				onChange={(e) => setInputValue(e.target.value)}
 			/>
 		</>
