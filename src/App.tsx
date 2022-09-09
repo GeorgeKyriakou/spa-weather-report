@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import "./App.css";
+import SearchBar from "./components/BigSearch";
+import { Weather } from "./models/Weaher";
+
+const App = () => {
+	const [weather, setWeather] = useState({} as Weather);
+
+	return (
+		<div className="App">
+			<div className="header">
+				<SearchBar setWeather={setWeather} />
+			</div>
+			<div>
+				<pre>{JSON.stringify(weather)}</pre>
+			</div>
+		</div>
+	);
+};
 
 export default App;

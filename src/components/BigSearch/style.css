@@ -1,0 +1,15 @@
+.search {
+	width: 70%;
+	height: 35px;
+	font-size: inherit;
+	position: relative;
+	border-radius: 22px;
+	font-family: inherit;
+	padding-inline-end: 30px;
+	border: 1px solid black;
+	padding-inline-start: 30px;
+}
+
+.search:focus {
+	outline: lightgray;
+}
